@@ -1,0 +1,9 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let data of mainArray"
+            [ngStyle]="{'color': data.textColor,'font-size': data.textSize, 'transition': 'all ease-in-out .9s'}">
+            {{ data.number | currency: 'INR'}}. <span>{{data.text }}</span>
+        </li>
+    </ul>
+</div>
+<button (click)="getDifferent()">Click me</button>
